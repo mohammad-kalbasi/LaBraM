@@ -20,12 +20,12 @@ import os
 from pathlib import Path
 
 from timm.models import create_model
-from optim_factory import create_optimizer
+from .optim_factory import create_optimizer
 
-from engine_for_vqnsp import evaluate, train_one_epoch, calculate_codebook_usage
-from utils import NativeScalerWithGradNormCount as NativeScaler
-import modeling_vqnsp
-import utils
+from .engine_for_vqnsp import evaluate, train_one_epoch, calculate_codebook_usage
+from .utils import NativeScalerWithGradNormCount as NativeScaler
+from . import modeling_vqnsp
+from . import utils
 
 
 def get_args():

@@ -15,7 +15,7 @@ from typing import Iterable
 import torch
 import torch.nn as nn
 
-import utils
+from . import utils
 
 def train_one_epoch(model: torch.nn.Module, 
                             data_loader_list: Iterable, 
