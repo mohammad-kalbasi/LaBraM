@@ -17,7 +17,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import utils
+from . import utils
 from einops import rearrange
 from contextlib import nullcontext
 

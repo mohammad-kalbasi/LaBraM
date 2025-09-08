@@ -20,13 +20,13 @@ import os
 from pathlib import Path
 
 from timm.models import create_model
-from optim_factory import create_optimizer
+from .optim_factory import create_optimizer
 
-from engine_for_pretraining import train_one_epoch
-from utils import NativeScalerWithGradNormCount as NativeScaler
-import utils
-import modeling_pretrain
-import modeling_vqnsp
+from .engine_for_pretraining import train_one_epoch
+from .utils import NativeScalerWithGradNormCount as NativeScaler
+from . import utils
+from . import modeling_pretrain
+from . import modeling_vqnsp
 
 def get_args():
     parser = argparse.ArgumentParser('LaBraM pre-training script', add_help=False)
